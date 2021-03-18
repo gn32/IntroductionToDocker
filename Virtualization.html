@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>My first website</title>
+</head>
+<body>
+
+<header class="bg-white">
+    <div class="container-md px-4 mb-5">
+        <div class="row gx-4">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
+                <a class="navbar-brand" href="home.html">Home</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                   <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="about.html">About</span></a>
+                        </li>
+                        <li class="nav-item active ">
+                            <a class="nav-link active " href="Virtualization.html">Virtualization</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="Containerization.html">Containerization</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="Comparison.html">Comparison</span></a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+</body>
+</html>
+
+   <header class="bg-white">
+    <div class="container-md px-4 mb-5">
+         <div class="row gx-4">
+        <div class="row justify-content-around text-center mb-3">
+                <h3 class = "mt-auto" > What is Virtualization ?</h3>
+            <p class="lead"> Virtualization is a process that allows for more efficient utilization of physical
+                computer hardware and is the foundation of cloud computing</p>
+        </div>
+        <div class="px-4 mb-4 ml-5 mr-5 ">
+
+            <div class="col-md text-center mt-auto mb-4 ">
+                 <img src="Images/Virt.1.png" class="col-md-7" alt="Responsive image">
+            </div>
+                <p><h3>How Virtualization works?</h3>
+            <ul>
+                <li>Virtualization 101
+Due to the limitations of x86 servers, many IT organizations must deploy multiple servers,
+                    each operating at a fraction of their capacity, to keep pace with today’s
+                    high storage and processing demands. The result: huge inefficiencies and
+                    excessive operating costs.</li>
+
+
+<li>Virtualization relies on software to simulate hardware functionality and create a virtual computer system.
+    This enables IT organizations to run more than one virtual system – and multiple operating systems and
+    applications – on a single server. The resulting benefits include economies of scale and greater efficiency.</li>
+            </ul> </p>
+        <p>    <h3>Virtual Machines Explained</h3>
+<ul>
+    <li>A virtual computer system is known as a “virtual machine” (VM): a
+        tightly isolated software container with an operating system and application inside.
+        Each self-contained VM is completely independent. Putting multiple VMs on a single
+        computer enables several operating systems and applications to run on just one physical
+        server, or “host.”</li>
+
+<li> A thin layer of software called a “hypervisor” decouples the virtual machines
+    from the host and dynamically allocates computing resources to each virtual machine as needed.</li> </ul> </p>
+
+<p><h3>Key Properties of Virtual Machines-</h3>
+            <p> VMs have the following characteristics, which offer several benefits- </p>
+
+ <h4> Partitioning </h4>
+<li>	Run multiple operating systems on one physical machine.</li>
+    <li>	Divide system resources between virtual machines.</li>
+ <h4>Isolation </h4>
+            <li>	Provide fault and security isolation at the hardware level. </li>
+            <li>	Preserve performance with advanced resource controls.</li>
+<h4> Encapsulation</h4>
+            <li>Save the entire state of a virtual machine to files. </li>
+<li>Move and copy virtual machines as easily as moving and copying files.</li>
+ <h4>Hardware Independence </h4>
+            <li>Provision or migrate any virtual machine to any physical server.</li> </p>
+            <p><h3>Types of Virtualization-</h3>
+ <h4>1. Server Virtualization </h4>
+
+            <div class="col-md text-center mt-auto mb-4 ">
+                 <img src="Images/Virt.2.png" class="col-md-7" alt="Responsive image">
+            </div>
+
+
+Server virtualization enables multiple operating systems to run on a single physical
+    server as highly efficient virtual machines. Key benefits include:
+<li>Greater IT efficiencies</li>
+<li>Reduced operating costs</li>
+<li>Faster workload deployment</li>
+<li>Increased application performance</li>
+<li>Higher server availability</li>
+            <li>Eliminated server sprawl and complexity</li> </p>
+
+<p> <h4>2. Network Virtualization </h4>
+             <div class="col-md text-center mt-auto mb-4 ">
+                 <img src="Images/Virt.3.png" class="col-md-7" alt="Responsive image">
+            </div>
+
+By completely reproducing a physical network, network virtualization
+            allows applications to run on a virtual network as if
+            they were running on a physical network — b
+            ut with greater operational benefits and all the hardware
+            independencies of virtualization.
+            (Network virtualization presents
+            logical networking devices and services —
+            logical ports, switches, routers, firewalls,
+            load balancers, VPNs and more — to connected workloads.) </p>
+
+            <p> <h4>3. Desktop Virtualization </h4>
+
+             <div class="col-md text-center mt-auto mb-4 ">
+                 <img src="Images/Virt.4.png" class="col-md-7" alt="Responsive image">
+            </div>
+            Desktop virtualization allows the users’ OS to
+
+            be remotely stored on a server in the data centre.
+
+            It allows the user to access their desktop virtually,
+            from any location by a different machine. Users
+            who want specific operating systems other than
+            Windows Server will need to have a virtual desktop.
+            Main benefits of desktop virtualization are user mobility,
+            portability, easy management of software installation, updates and patches.
+        </p>
+
+            <p><h3> Benefits of virtualization- </h3>
+Virtualization brings several benefits to data center operators and service providers:
+<UL>
+    <li> Resource efficiency: Before virtualization, each application server required its own dedicated
+        physical CPU—IT staff would purchase and configure a separate server for each application
+        they wanted to run. (IT preferred one application and one operating system (OS) per computer
+        for reliability reasons.) Invariably, each physical server would be underused.
+        In contrast, server virtualization lets you run several applications—each on
+        its own VM with its own OS—on a single physical computer (typically an x86 server)
+        without sacrificing reliability.
+        This enables maximum utilization of the physical hardware’s computing capacity. </li>
+ <li> Easier management: Replacing physical computers with software-defined
+     VMs makes it easier to use and manage policies written in software.
+     This allows you to create automated IT service management workflows.
+     For example, automated deployment and configuration tools enable administrators
+     to define collections of virtual machines and applications as services, in software templates.
+     This means that they can install those services repeatedly and consistently without cumbersome,
+     time-consuming. and error-prone manual setup. Admins can use virtualization security policies to
+     mandate certain security configurations based on the role of the virtual machine.
+     Policies can even increase resource efficiency by retiring unused virtual machines to save on
+     space and computing power. </li>
+ <li> Minimal downtime: OS and application crashes can cause downtime and disrupt user productivity.
+     Admins can run multiple redundant virtual machines alongside each other and failover between them
+     when problems arise. Running multiple redundant physical servers is more expensive. </li>
+ <li> Faster provisioning: Buying, installing, and configuring hardware for each application
+     is time-consuming. Provided that the hardware is already in place, provisioning virtual
+     machines to run all your applications is significantly faster.
+     You can even automate it using management software and build it into existing workflows. </li> </UL></p>
+
+
+
+            <p><h3> Virtualization vs. Cloud Computing- </h3>
+Although equally buzz-worthy technologies, virtualization and cloud computing are not
+            interchangeable. Virtualization is software that makes computing
+            environments independent of physical infrastructure, while cloud
+            computing is a service that delivers shared computing resources
+            (software and/or data) on demand via the Internet. As complementary solutions, organizations
+            can begin by virtualizing their servers and then moving to cloud computing for even
+            greater agility and self-service. </p>
+
+
