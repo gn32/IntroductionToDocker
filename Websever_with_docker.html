@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>My first website</title>
+</head>
+<body>
+
+<header class="bg-white">
+    <div class="container-md px-4 mb-5">
+        <div class="row gx-4">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
+                <a class="navbar-brand" href="index.html">Home</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                   <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="about.html">About</span></a>
+                        </li>
+                        <li class="nav-item active ">
+                            <a class="nav-link active " href="Virtualization.html">Virtualization</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="Containerization.html">Containerization</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="Comparison.html">Comparison</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="Websever_with_docker.html">Webserver with Docker</span></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+</body>
+</html>
+
+   <header class="bg-white">
+    <div class="container-md px-4 mb-5">
+         <div class="row gx-4">
+        <div class="row justify-content-around text-center mb-3">
+                <h3 class = "mt-auto" > Setup Web Server Over Docker Container in Linux</h3>
+        </div>
+        <p class="px-4 mb-4 ml-5 mr-5 ">
+
+            <div class="col-md text-center mt-auto mb-4 ">
+                 <img src="Images/webserver1.png" class="col-md-7" alt="Responsive image">
+            </div>
+            <ul>
+                <p>Before setting up a server we must know the real meaning or definition of a server. So, the Server
+                    is a program that provides the client with any kind of services. For example, a web server provides
+                    our websites, a database server provides us data. This means every server has work to do and for
+                    every different work we want them to do, we have to choose different servers.
+                </p>
+            </ul>
+            <p>    <h3>Pre-requisite:</h3>
+            <ul>
+                <p>
+                    1. Linux Operating system Like Ubuntu, Redhat, Kali Linux.                </p>
+                <p>
+                    2. Internet connectivity                </p>
+                <p>
+                    3. Docker installed on system                </p>
+
+            </ul>
+            </p>
+            <p>    <h3>What we are going to do <strong>VISUAL:</strong></h3>
+             <div class="col-md text-center mt-auto mb-4 ">
+                 <img src="Images/webserver2.png" class="col-md-7" alt="Responsive image">
+            </div>
+            <ul>
+                <p>we are going to use the Apache Web Server on Ubuntu to build our image. Let’s follow the steps
+                given below, to build our web server Docker file.</p>
+                <h3>Steps to configure a Web Server</h3>
+                <p><strong>Step 1</strong> − The first step is to build our Docker File. Let’s use vim and create a
+                    Docker File with the following information.</p>
+                <div class="col-md  mt-auto mb-4 ">
+                 <img src="Images/webserver3.png" class="col-md-8" alt="Responsive image">
+            </div>
+                <p> <strong>The following points need to be noted about the above statements −</strong>
+                <li>We are first creating our image to be from the Ubuntu base image.</li>
+                <li>Next, we are going to use the RUN command to update all the packages on the Ubuntu system.</li>
+                <li>Next, we use the RUN command to install apache2 on our image.</li>
+                <li>Next, we use the RUN command to install the necessary utility apache2 packages on our image.</li>
+                <li>Next, we use the RUN command to clean any unnecessary files from the system.</li>
+                <li>The EXPOSE command is used to expose port 80 of Apache in the container to the Docker host.</li>
+                <li>Finally, the CMD command is used to run apache2 in the background.</li>
+                </p>
+
+                <p><strong>Step 2</strong> − Run the Docker build command to build the Docker file. It can be done using
+                    the following command:</p>
+                <div class="col-md mt-auto mb-4 ">
+                 <img src="Images/webserver4.png" class="col-md-8" alt="Responsive image">
+            </div>
+                <p>We are tagging our image as <strong>mywebserver</strong>. Once the image is built, you will get a
+                    successful message that the file has been built.</p>
+                <p><strong>Step 3</strong> − Now that the web server file has been built, it’s now time to create a
+                    container from the image. We can do this with the Docker run command.</p>
+                <div class="col-md mt-auto mb-4 ">
+                 <img src="Images/webserver5.png" class="col-md-8" alt="Responsive image">
+            </div>
+                <p><strong>The following points need to be noted about the above command −</strong>
+                <li>The port number exposed by the container is 80. Hence with the –p command, we are mapping the same
+                port number to the 80 port number on our localhost.</li>
+                <Li>The –d option is used to run the container in detached mode. This is so that the container can run
+                    in the background.</Li>
+                </p>
+                <p>If you go to port 80 of the Docker host in your web browser, you will now see that Apache is up and
+                    running.</p>
+            </ul>
+         </div>
+    </div>
+   </header>
