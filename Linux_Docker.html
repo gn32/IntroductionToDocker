@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>My first website</title>
+</head>
+<body>
+
+<header class="bg-white">
+    <div class="container-md px-4 mb-5">
+        <div class="row gx-4">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
+                <a class="navbar-brand" href="index.html">Home</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                   <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="about.html">About</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="Virtualization.html">Virtualization</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="Containerization.html">Containerization</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="Comparison.html">Comparison</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="Websever_with_docker.html">Webserver with Docker</span></a>
+                        <li class="nav-item active ">
+                            <a class="nav-link active " href="Linux_Docker.html">Docker Login and Linux commands</span></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+</body>
+</html>
+
+   <header class="bg-white">
+    <div class="container-md px-4 mb-5">
+         <div class="row gx-4">
+        <div class="row justify-content-around text-center mb-3">
+                <h3 class = "mt-auto"> Docker Commands</h3>
+        </div>
+        <p class="px-4 mb-4 ml-5 mr-5 ">
+
+            <div class="col-md text-center mt-auto mb-4 ">
+                 <img src="Images/Linux_Dckr1.png" class="col-md-7" alt="Responsive image">
+            </div>
+            <ul>
+                <p><strong> 1. docker –version:</strong> This command is used to get the currently installed version of
+                    docker</p>
+                <p><strong> 2. docker pull: </strong>This command is used to pull images from the docker repository
+                    (hub.docker.com)</p>
+                <p>Usage: docker pull (image name)</p>
+                <p><strong>3. docker run:</strong> This command is used to create a container from an image</p>
+                <p>Usage: docker run -it -d (image name)</p>
+                <p><strong>4. docker ps: </strong>This command is used to list the running containers</p>
+                <p><strong>5. docker ps -a: </strong>This command is used to show all the running and exited containers</p>
+                <p><strong>6. docker exec: </strong> This command is used to access the running container</p>
+                <p>Usage: docker exec -it (container id) bash</p>
+                <p><strong>7. docker stop: </strong>This command stops a running container</p>
+                <p>Usage: docker stop (container id)</p>
+                <p><strong>8. docker kill: </strong>This command kills the container by stopping its execution
+                    immediately. The difference between ‘docker kill’ and ‘docker stop’ is that ‘docker stop’ gives the
+                    container time to shutdown gracefully, in situations when it is taking too much time for getting the
+                    container to stop, one can opt to kill it</p>
+                <p>Usage: docker kill (container id)</p>
+
+                <p><strong>9. docker commit: </strong>This command creates a new image of an edited container on the
+                    local system</p>
+                <p>Usage: docker commit (conatainer id) (username/imagename)</p>
+                <p><strong>10. docker login: </strong>This command is used to login to the docker hub repository</p>
+                <p><strong>11. docker push: </strong>This command is used to push an image to the docker hub repository</p>
+                <p>Usage: docker push (username/image name)</p>
+                <p><strong>12. docker images: </strong>This command lists all the locally stored docker images</p>
+                <p><strong>13. docker rm: </strong>This command is used to delete a stopped container</p>
+                <p>Usage: docker rm (container id)</p>
+                <p><strong>14. docker rmi: </strong>This command is used to delete an image from local storage</p>
+                <p>Usage: docker rmi (image-id)</p>
+                <p><strong>15. docker build: </strong>This command is used to build an image from a specified docker file</p>
+                <p>Usage: docker build (path to docker file)</p>
+            </ul>
+             <p>
+             <p><h3>Docker login</h3></p>
+                 <p><h5>Description</h5></p>
+                    Log in to a Docker registry
+                 <p>Usage: docker login [OPTIONS] [SERVER]</p>
+                 <p><h5>Options</h5></p>
+                 <div class="col-md mt-auto mb-4 ">
+                 <img src="Images/Linux_Dckr2.png" class="col-md-7" alt="Responsive image">
+            </div>
+                 <p><h3>Examples</h3></p>
+             <p><strong>Login to a self-hosted registry</strong></p>
+             <p>If you want to login to a self-hosted registry you can specify this by adding the server name.</p>
+
+             <p>Usage: $ docker login localhost:8080 </p>
+             <p><strong>Provide a password using STDIN</strong></p>
+             <p>To run the <strong>docker login</strong> command non-interactively, you can set the
+                 <strong>--password-stdin</strong> flag to provide a password through <strong>STDIN</strong>.
+                 Using <strong>STDIN</strong> prevents the password from ending up in the shell’s history, or log-files.
+             </p>
+
+             <p>The following example reads a password from a file, and passes it to the <strong>docker login</strong>
+                 command using <strong>STDIN:</strong></p>
+
+<p>Usage: $ cat ~/my_password.txt | docker login --username foo --password-stdin</p>
+             <p><strong>Privileged user requirement</strong></p>
+             <p><strong>docker login</strong> requires user to use <strong>sudo</strong> or be <strong>root</strong>,
+                 except when:</p>
+
+             <p>1. Connecting to a remote daemon, such as a docker-machine provisioned docker engine.</p>
+             <p>2. User is added to the docker group. This will impact the security of your system; the docker group is
+                 root equivalent. See Docker Daemon Attack Surface for details.</p>
+             <p>You can log into any public or private repository for which you have credentials. When you log in, the
+                 command stores credentials in <strong>$HOME/.docker/config.json</strong> on Linux or
+                 <strong>%USERPROFILE%/.docker/config.json</strong> on Windows.</p>
+             </ul>
+         </div>
+    </div>
+   </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
