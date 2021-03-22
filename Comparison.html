@@ -16,13 +16,13 @@
 <header class="bg-white">
     <div class="container-md px-4 mb-5">
         <div class="row gx-4">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
+           <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-1">
                 <a class="navbar-brand" href="index.html">Home</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                   <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item ">
                             <a class="nav-link" href="about.html">About</span></a>
@@ -57,46 +57,46 @@
 
 <header class="bg-white">
     <div class="container-md px-4 mb-5">
-         <div class="row gx-4">
-        <div class="row justify-content-around text-center mb-3">
+        <div class="row gx-4">
+            <div class="row justify-content-around text-center mb-3">
                 <h3 class = "mt-auto" >Containerization vs Virtualization</h3>
-            <p class="lead"> Containerization is a type of Virtualization which brings
-                virtualization to the operating system level. While Virtualization brings abstraction
-                to the hardware,
-                Containerization brings abstraction to the operating system.</p>
-        </div>
-        <div class="px-4 mb-4 ml-5 mr-5 ">
-
-            <div class="col-md text-center mt-auto mb-4 ">
-                 <img src="Images/vm-vs-containers.png" class="col-md-7" alt="Responsive image">
+                <p class="lead"> Containerization is a type of Virtualization which brings
+                    virtualization to the operating system level. While Virtualization brings abstraction
+                    to the hardware,
+                    Containerization brings abstraction to the operating system.</p>
             </div>
-                <p><h3>Which one to Use-</h3>
-            The choice of virtualization versus containerization depends on the business
-            development and operational model, and the way applications are written
-            and produced. Both are software technologies that create self-contained
-            virtual packages, but to choose the one that will best suit the user’s
-            needs, we will look at the following points.
-<h4>Speed:</h4>
-    <p>When it comes to speed, containers were meant to significantly
-    reduce the time needed to deploy and run an application. The container starts
-    immediately, since the operating system is already up and running,
-        so the application will start up without any noticeable delay.
-        This is an excellent solution for a development environment, mainly,
-        as it saves time in the application testing cycle. On the other hand,
-        virtual machines need to start the entire operating system, which includes
-        the full boot process. This will also include the startup of the services,
-        and it will take much longer than it would for a container. </p>
-<h4>Resources:</h4>
-            <p>Since virtual servers run separate operating systems, and every system
-        call has to go through the virtualization layer, a certain amount of overhead
-        is created, causing more resources to be used. This is particularly true for memory
-        usage, as virtual machines consume memory even when they aren’t running any user processes.
-        However, CPU virtualization is relatively cheap, so the CPU overhead of a virtual machine
-        can be much smaller. When it comes to containers, they can start up pretty quickly,
-        so their memory consumption doesn't increase. There is also much less overhead as
-        they are using the same operating system without a hypervisor to go through.</p>
-<h4>Security and isolation:</h4>
-            <p>In regard to security and isolation, virtualization wins,
+            <div class="px-4 mb-4 ml-5 mr-5 ">
+
+                <div class="col-md text-center mt-auto mb-4 ">
+                    <img src="Images/vm-vs-containers.png" class="col-md-7" alt="Responsive image">
+                </div>
+                <p><h4>Which one to Use-</h4>
+                The choice of virtualization versus containerization depends on the business
+                development and operational model, and the way applications are written
+                and produced. Both are software technologies that create self-contained
+                virtual packages, but to choose the one that will best suit the user’s
+                needs, we will look at the following points. </p>
+                <p><h4>Speed:</h4>
+                <p>When it comes to speed, containers were meant to significantly
+                    reduce the time needed to deploy and run an application. The container starts
+                    immediately, since the operating system is already up and running,
+                    so the application will start up without any noticeable delay.
+                    This is an excellent solution for a development environment, mainly,
+                    as it saves time in the application testing cycle. On the other hand,
+                    virtual machines need to start the entire operating system, which includes
+                    the full boot process. This will also include the startup of the services,
+                    and it will take much longer than it would for a container. </p>
+                <p><h4>Resources:</h4>
+                Since virtual servers run separate operating systems, and every system
+                call has to go through the virtualization layer, a certain amount of overhead
+                is created, causing more resources to be used. This is particularly true for memory
+                usage, as virtual machines consume memory even when they aren’t running any user processes.
+                However, CPU virtualization is relatively cheap, so the CPU overhead of a virtual machine
+                can be much smaller. When it comes to containers, they can start up pretty quickly,
+                so their memory consumption doesn't increase. There is also much less overhead as
+                they are using the same operating system without a hypervisor to go through.</p>
+                <p><h4>Security and isolation:</h4>
+                In regard to security and isolation, virtualization wins,
                 as it keeps virtual machines separate and isolated
                 from each other. One infected virtual machine will not affect another one,
                 and each virtual machine can incorporate its own security protocols
@@ -104,33 +104,38 @@
                 since containers only isolate data and applications at the
                 process level, they provide a less secure environment and
                 depend on the security protocols of the host system. </p>
-            <h4>Portability and application sharing:</h4>
-       <p>   Since container images are much smaller than virtual
-            machines, they are easier to transfer and save space
-            on the host’s filesystem. Virtual machines,
-            on the other hand, need to have a copy of the
-            whole operating system, including the kernel, system libraries, configuration files,
-            all the directories required by the operating system and all the utilities.
-            This dramatically increases the size of the image and is not that easy to share.
-            Container images can be shared in any manner of ways, and there are a number of
-            application sharing hubs on the internet. Virtual machine images do not have
-            such centralized hubs and would usually need to be uploaded to another server instead.</p>
-<h4> Operating system requirements :</h4>
-            <p>A virtual machine is best used in the case when a business needs to run
+                <p>     <h4>Portability and application sharing:</h4>
+                Since container images are much smaller than virtual
+                machines, they are easier to transfer and save space
+                on the host’s filesystem. Virtual machines,
+                on the other hand, need to have a copy of the
+                whole operating system, including the kernel, system libraries, configuration files,
+                all the directories required by the operating system and all the utilities.
+                This dramatically increases the size of the image and is not that easy to share.
+                Container images can be shared in any manner of ways, and there are a number of
+                application sharing hubs on the internet. Virtual machine images do not have
+                such centralized hubs and would usually need to be uploaded to another server instead.</p>
+                <p><h4> Operating system requirements :</h4>
+                A virtual machine is best used in the case when a business needs to run
                 multiple applications that require the full functionality of
                 a dedicated operating system. However, if most of the applications
                 have the same operating system requirements, the containers would
                 be a much more practical solution. </p>
-            <h4> Application lifecycle: </h4><p>Containers are highly suitable
-    for short-term application needs, as they can be
-    set up quickly, are portable, and can be started up much faster.
-    They are, however, limited by the lack of a dedicated operating
-    system, processing, and storage resources. Containers should be
-    used when the biggest priority is maximizing the number of applications
-    running on a minimal amount of servers. However, virtual machines are
-    far better suited for applications that need to be used for
-    an extended period of time, since they run in a virtualized environment that is more robust and versatile.
-</p>
- <div class="col-md text-center mt-auto mb-4 ">
-                 <img src="Images/Virtualization+and+Containerization.jpg" class="col-md-7" alt="Responsive image">
+                <p>      <h4> Application lifecycle: </h4>Containers are highly suitable
+                for short-term application needs, as they can be
+                set up quickly, are portable, and can be started up much faster.
+                They are, however, limited by the lack of a dedicated operating
+                system, processing, and storage resources. Containers should be
+                used when the biggest priority is maximizing the number of applications
+                running on a minimal amount of servers. However, virtual machines are
+                far better suited for applications that need to be used for
+                an extended period of time, since they run in a virtualized environment that is more robust and versatile.
+                </p>
+                <div class="col-md text-center mt-auto mb-4 ">
+                    <img src="Images/Virtualization+and+Containerization.jpg" class="col-md-7" alt="Responsive image">
+                </div>
             </div>
+        </div>
+    </div>
+
+</header>
