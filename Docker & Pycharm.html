@@ -60,18 +60,21 @@
          <div class="row gx-4">
         <div class="row justify-content-around text-center mb-3">
                 <h3 class = "mt-auto">PyCharm - Docker configuration</h3>
+             <p class="lead"> This tutorial shows how to configure PyCharm Professional for SKA control system development
+                    using the SKA Docker images. </p>
         </div>
-        <p class="px-4 mb-4 ml-5 mr-5 ">
+        <div class="px-4 mb-4 ml-5 mr-5 ">
+             <p> PyCharm can be configured to use the Python interpreter inside a Docker
+                    image, which allows:
             <ul>
-                <p>These instructions show how to configure PyCharm Professional for SKA control system development
-                    using the SKA Docker images. PyCharm can be configured to use the Python interpreter inside a Docker
-                    image, which allows:</p>
-                <p><li>development and testing without requiring a local Tango installation;</li>
+
+                <li>development and testing without requiring a local Tango installation;</li>
                 <li>the development environment to be identical to the testing and deployment environment, eliminating
-                    problems that occur due to differences in execution environment.</li></p>
+                    problems that occur due to differences in execution environment.</li>
+         </ul></p>
                 <p>Follow the steps below to configure PyCharm to develop new code and run tests for the tango-example
                     project using the Docker images for the project.</p>
-                <h4 class = "mt-auto">Prerequisites</h4>
+                <h4 class = "mt-auto">Prerequisites-</h4>
                     <p>Make sure that the following prerequistes are met:</p>
                     <p><li>Docker is installed, as described on the page Docker Docs.</li>
                     <li>PyCharm Professional must be installed. PyCharm Community is not sufficient!</li>
@@ -90,13 +93,13 @@
                     </div>
                 <p>4. Click Clone, then click Yes in the subsequent confirmation dialog to create a PyCharm project
                     based on the sources you have cloned.</p>
-                <h4 class = "mt-auto">Build the application image</h4>
+                <h4 class = "mt-auto">Build the application image-</h4>
              <p>With the source code source code checked out, the next step is to build a Docker image for the
                  application. This image will contain the Python environment which will we will later connect to
                  PyCharm.</p>
              <p>Begin a terminal session in the cloned repository directory and build the image:</p>
              <p>The last lines of terminal output displays the name and tags of the resulting images.</p>
-             <h4 class = "mt-auto">Configure the remote interpreter</h4>
+             <h4 class = "mt-auto">Configure the remote interpreter-</h4>
              <p>Following the official PyCharm documentation, configure Docker as a remote interpreter using the image
                  you just created. The ‘Add Python Interpreter’ dialog should look similar to this:</p>
                     <div class="col-md text-center mt-auto mb-4 ">
@@ -115,7 +118,7 @@
              <p>Whenever you change the Python environment, for example by adding or removing dependencies in Piplock,
                  after rebuilding the Docker image you should regenerate the project skeletons to make PyCharm aware of
                  the changes. To do this, select File | Invalidate Caches / Restart… from the main menu.</p>
-             <h4>Running unit tests</h4>
+             <h4>Running unit tests-</h4>
              <p>The tango-example project illustrates two types of unit test:</p>
 
              <p>1. Self-contained unit tests that execute within the confines of a single Docker container. These tests
